@@ -8,7 +8,7 @@ const app = express()
 connectdb()
 app.use(cors({
     origin: ["http://localhost:5173",
-    "https://ai-image-generator-kappa-tawny.vercel.app/login"
+    "https://ai-image-generator-kappa-tawny.vercel.app"
     ], // Your React app URL
   credentials: true,
 }))
