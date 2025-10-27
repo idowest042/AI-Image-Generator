@@ -31,10 +31,6 @@ export const generateImage = async (req, res) => {
       { headers, responseType: "arraybuffer" } // binary response
     );
 
-    // Optional: save image to disk
-    fs.writeFileSync("generated-image.png", response.data);
-    console.log("✅ Image saved as generated-image.png");
-
     // ✅ Send the image back to Postman
     res.set("Content-Type", "image/png");
     res.send(response.data);
